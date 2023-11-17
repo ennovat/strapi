@@ -33,6 +33,7 @@ describe('Build Component Schema', () => {
     const [pluginResponseValue, apiResponseValue] = Object.values(schemas);
 
     const expectedShape = {
+      type: 'object',
       properties: {
         data: {
           type: 'object',
@@ -78,10 +79,11 @@ describe('Build Component Schema', () => {
     }
 
     const schemaNames = Object.keys(schemas);
-    const pluginListResponseValue = schemas['UsersPermissionsRoleListResponse'];
-    const apiListResponseValue = schemas['RestaurantListResponse'];
+    const pluginListResponseValue = schemas.UsersPermissionsRoleListResponse;
+    const apiListResponseValue = schemas.RestaurantListResponse;
 
     const expectedShape = {
+      type: 'object',
       properties: {
         data: {
           type: 'array',
@@ -142,8 +144,8 @@ describe('Build Component Schema', () => {
     }
 
     const schemaNames = Object.keys(schemas);
-    const pluginListResponseValue = schemas['UsersPermissionsRoleRequest'];
-    const apiListResponseValue = schemas['RestaurantRequest'];
+    const pluginListResponseValue = schemas.UsersPermissionsRoleRequest;
+    const apiListResponseValue = schemas.RestaurantRequest;
 
     const expectedShape = {
       type: 'object',
@@ -190,8 +192,8 @@ describe('Build Component Schema', () => {
     }
 
     const schemaNames = Object.keys(schemas);
-    const pluginListResponseValue = schemas['UsersPermissionsRoleLocalizationResponse'];
-    const apiListResponseValue = schemas['RestaurantLocalizationResponse'];
+    const pluginListResponseValue = schemas.UsersPermissionsRoleLocalizationResponse;
+    const apiListResponseValue = schemas.RestaurantLocalizationResponse;
 
     const expectedShape = {
       type: 'object',
@@ -234,8 +236,8 @@ describe('Build Component Schema', () => {
     }
 
     const schemaNames = Object.keys(schemas);
-    const pluginListResponseValue = schemas['UsersPermissionsRoleLocalizationRequest'];
-    const apiListResponseValue = schemas['RestaurantLocalizationRequest'];
+    const pluginListResponseValue = schemas.UsersPermissionsRoleLocalizationRequest;
+    const apiListResponseValue = schemas.RestaurantLocalizationRequest;
 
     const expectedShape = {
       type: 'object',

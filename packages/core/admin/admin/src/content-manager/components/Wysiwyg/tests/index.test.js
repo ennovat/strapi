@@ -29,7 +29,7 @@ describe('Wysiwyg render and actions buttons', () => {
   let returnedValue;
 
   beforeEach(() => {
-    const onChange = jest.fn(e => {
+    const onChange = jest.fn((e) => {
       returnedValue = e.target.value;
     });
 
@@ -626,7 +626,7 @@ describe('Wysiwyg render and actions buttons', () => {
         height: 290px;
         color: #32324d;
         direction: ltr;
-        font-family: --apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell, 'Open Sans','Helvetica Neue',sans-serif;
+        font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell, 'Open Sans','Helvetica Neue',sans-serif;
       }
 
       .c34 .CodeMirror-lines {
@@ -1402,9 +1402,9 @@ describe('Wysiwyg render and actions buttons', () => {
     fireEvent.click(renderedContainer.querySelector('#Underline'));
 
     const hasUnderlineMarkdown = getContainerByText((content, node) => {
-      const hasText = node => node.textContent === '<u>Underline</u>';
+      const hasText = (node) => node.textContent === '<u>Underline</u>';
       const nodeHasText = hasText(node);
-      const childrenDontHaveText = Array.from(node.children).every(child => !hasText(child));
+      const childrenDontHaveText = Array.from(node.children).every((child) => !hasText(child));
 
       return nodeHasText && childrenDontHaveText;
     });
@@ -1560,9 +1560,9 @@ Code
     fireEvent.click(renderedContainer.querySelector('#Underline'));
 
     const hasUnderlineMarkdown = containerQueryByText((content, node) => {
-      const hasText = node => node.textContent === '<u>Underline</u>';
+      const hasText = (node) => node.textContent === '<u>Underline</u>';
       const nodeHasText = hasText(node);
-      const childrenDontHaveText = Array.from(node.children).every(child => !hasText(child));
+      const childrenDontHaveText = Array.from(node.children).every((child) => !hasText(child));
 
       return nodeHasText && childrenDontHaveText;
     });
@@ -1646,7 +1646,7 @@ describe('Wysiwyg render actions with initial value', () => {
   let returnedValue = 'hello world';
 
   beforeEach(() => {
-    const onChange = jest.fn(e => {
+    const onChange = jest.fn((e) => {
       returnedValue += e.target.value;
     });
 
